@@ -162,3 +162,12 @@ a:hover {
 .g-recaptcha, .g-recaptcha > div {
   margin: auto;
 }
+
+.description {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #FFF;
+	text-align: center;
+	font-weight: 300;
+	opacity: .7;
+}
