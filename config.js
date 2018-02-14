@@ -1,5 +1,3 @@
-const psIndex = require('./psIndex');
-
 module.exports = {
   // your community or team name to display on join page.
   community: process.env.COMMUNITY_NAME || '코딩 배우는 디자이너 그룹',
@@ -14,7 +12,7 @@ module.exports = {
   //   curl -X POST 'https://YOUR-SLACK-TEAM.slack.com/api/users.admin.invite' \
   //   --data 'email=EMAIL&token=TOKEN&set_active=true' \
   //   --compressed
-  slacktoken: process.env.SLACK_TOKEN || psIndex.join('-'),
+  slacktoken: process.env.SLACK_TOKEN,
   // an optional security measure - if it is set, then that token will be required to get invited.
   inviteToken: process.env.INVITE_TOKEN || null,
   // an optional security measure - if both are set, then recaptcha will be used.
