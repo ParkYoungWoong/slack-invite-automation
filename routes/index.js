@@ -30,21 +30,21 @@ router.post('/invite', function(req, res) {
           if (body.ok) {
             res.render('result', {
               community: config.community,
-              message: 'Success! Check &ldquo;'+ req.body.email +'&rdquo; for an invite from Slack.'
+              message: '성공하였습니다! &ldquo;'+ req.body.email +'&rdquo;에서 Slack 초대장을 확인하세요.'
             });
           } else {
-            const error = body.error;
+            var error = body.error;
             if (error === 'already_invited' || error === 'already_in_team') {
               res.render('result', {
                 community: config.community,
-                message: 'Success! You were already invited.<br>' +
-                        'Visit <a href="https://'+ config.slackUrl +'">'+ config.community +'</a>'
+                message: '성공하였습니다! 이미 초대장을 발송했습니다..<br>' +
+                        '<a href="https://'+ config.slackUrl +'">'+ config.community +'</a>에 방문해 보세요.'
               });
               return;
             } else if (error === 'invalid_email') {
-              error = 'The email you entered is an invalid email.';
+              error = '입력하신 이메일은 유효하지 않은 이메일입니다.';
             } else if (error === 'invalid_auth') {
-              error = 'Something has gone wrong. Please contact a system administrator.';
+              error = '문제가 있습니다. 시스템 관리자에게 문의하십시오.';
             }
 
             res.render('result', {
@@ -70,7 +70,7 @@ router.post('/invite', function(req, res) {
         if (body.success) {
           doInvite();
         } else {
-          error = 'Invalid captcha.';
+          var error = 'Invalid captcha.';
           res.render('result', {
             community: config.community,
             message: 'Failed! ' + error,

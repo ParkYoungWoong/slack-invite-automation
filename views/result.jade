@@ -4,12 +4,14 @@ html
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title #{__('TITLE', community)}
-    link(href="css/style.css", rel="stylesheet", type="text/css")
-    link(href="//fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic|Open+Sans:700italic,400,600,300,700,800", rel="stylesheet", type="text/css")
+    link(href="/css/style.css", rel="stylesheet", type="text/css")
   body
-    #wrapper
-      .main
-        .header
-          h1
-            strong #{community}
-          h2(class="#{isFailed?'error':''}") !{message}
+    #container
+      .header
+        .logo
+          img(src="/images/logo.png", alt="Slack + HEROPY")
+        if isFailed
+          h1 초대장 전송을 실패하였습니다.
+        else
+          h1 초대장 전송을 완료하였습니다.
+        h2(class="#{isFailed?'error':'success'}") !{message}

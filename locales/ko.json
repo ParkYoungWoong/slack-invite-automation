@@ -1,7 +1,8 @@
 {
-	"HEADER": "Slack 채널 [ %s ] 에 가입하기 위한 이메일 주소를 입력하세요!",
+	"HEADER": "Slack [ %s ]에 가입하기 위한 이메일 주소를 입력하세요.",
 	"ENTER_EMAIL": "이메일 주소를 입력하세요",
 	"ENTER_TOKEN": "초대 토큰을 입력하세요",
 	"TITLE": "Slack의 %s 커뮤니티에 참여하세요!",
-	"DESCRIPTION": "이메일로 초대장이 발송됩니다. 가입 시 한글 실명으로 가입하세요."
+	"DESCRIPTION1": "이메일로 초대장이 발송됩니다.",
+	"DESCRIPTION2": "가입 시 한글 실명(Full / Display name)으로 가입하세요."
 }
