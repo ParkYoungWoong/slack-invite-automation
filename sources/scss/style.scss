@@ -49,6 +49,9 @@ html, body {
     }
     &.success {
       color: $color-success;
+      a {
+        color: $color-success;
+      }
     }
     &.error {
       color: $color-danger;
